@@ -1,0 +1,153 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.section_1 {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  background-image: radial-gradient(circle, #5c0067 20%, #000000 100%);
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-image: linear-gradient(180deg, rgb(0, 40, 0), rgb(250, 4, 250));
+  box-shadow: 0px 40px 40px;
+}
+
+.container > p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+}
+
+.container button {
+  width: 40px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0px 10px 10px;
+}
+
+button {
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #000000;
+  background-color: #000000;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+button:hover {
+  background-color: #f5f5f5;
+}
+
+button:active {
+  background-color: #f5f5f5;
+  box-shadow: 0 5px #000000;
+  transform: translateY(4px);
+}
+
+button p {
+  color: purple;
+}
+
+.section_2 {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+  background-image: url(../img/5568088.jpg);
+  background-repeat: no-repeat;
+}
+
+.login_box {
+  width: 450px;
+  height: 500px;
+  margin: 0 auto;
+  border-radius: 20px;
+  backdrop-filter: blur(7px);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: transparent;
+}
+
+.login_box h1 {
+  font-size: 50px;
+}
+
+.formbox {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputbox {
+  width: 400px;
+  height: 50px;
+  margin-bottom: 30px;
+  position: relative;
+  border: 2px solid rgba(0, 0, 0);
+  border-radius: 40px;
+}
+
+.redibputborder {
+  border: 2px solid red !important;
+  border-radius: 40px;
+}
+
+.inputbox input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding-left: 20px;
+  color: white;
+}
+
+.inputbox input::placeholder {
+  color: white;
+  font-size: 16px;
+}
+
+.svg {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}
+
+.formbox > button {
+  margin-bottom: 15px;
+  background-color: transparent;
+  box-shadow: none;
+  font-size: 33px;
+}
+
+.loginbtn {
+  font-size: 18px !important;
+}
