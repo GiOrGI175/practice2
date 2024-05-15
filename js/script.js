@@ -65,7 +65,7 @@ add_btn.addEventListener('click', () => {
     ulBox.appendChild(liBox);
 
     liBox.appendChild(liTxtContetn);
-    liTxtContetn.textContent = inputvalue;
+    liTxtContetn.textContent = `strong password: ${inputvalue}`;
 
     liBox.classList.add('li_box');
     //! append Elements >]
