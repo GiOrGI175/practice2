@@ -38,22 +38,76 @@ minus5.addEventListener('click', () => {
 
 //! html section_2 functional [<
 
-addEventListener('keydown', () => {
-  let passwordInput1 = document.getElementById('input1');
+const add_btn = document.querySelector('.add_btn');
 
-  let passwordInput2 = document.getElementById('input2');
+add_btn.addEventListener('click', () => {
+  let input = document.querySelector('#li_input');
 
-  let passwordInput3 = document.getElementById('input3');
+  let ulBox = document.querySelector('.ul_box');
 
-  //   let password1 = passwordInput1.value;
+  let inputvalue = input.value.trim();
 
-  let password2 = passwordInput2.value;
+  // let li_box = creteElemen;
 
-  if (password2.length < 8) {
-    passwordInput2.classList.toggle('redibputborder');
+  while (ulBox.firstChild) {
+    ulBox.removeChild(ulBox.firstChild);
   }
+
+  if (inputvalue.length >= 8 && inputvalue.length <= 16) {
+    //! create elemnts [<
+    console.log(inputvalue.length);
+    let liBox = document.createElement('li');
+
+    let liTxtContetn = document.createElement('p');
+    //! create elemnts >]
+
+    //! append Elements [<
+    ulBox.appendChild(liBox);
+
+    liBox.appendChild(liTxtContetn);
+    liTxtContetn.textContent = inputvalue;
+
+    liBox.classList.add('li_box');
+    //! append Elements >]
+  } else if (inputvalue.length < 8) {
+    //! create elemnts [<
+    let liBox2 = document.createElement('li');
+
+    let pErorless8 = document.createElement('p');
+    //! create elemnts >]
+
+    //! append Elements [<
+    ulBox.appendChild(liBox2);
+
+    liBox2.appendChild(pErorless8);
+    pErorless8.textContent = 'this is not strong pasword! try again ';
+
+    liBox2.classList.add('li_box');
+
+    liBox2.classList.add('red_p');
+    //! append Elements >]
+  } else if (inputvalue.length > 16) {
+    //! create elemnts [<
+    let liBox3 = document.createElement('li');
+
+    let perormore16 = document.createElement('p');
+    //! create elemnts >]
+
+    //! append Elements [<
+    ulBox.appendChild(liBox3);
+
+    liBox3.appendChild(perormore16);
+    perormore16.textContent = 'The password must be a max of 16 symbol';
+
+    liBox3.classList.add('li_box');
+
+    liBox3.classList.add('red_p');
+    //! append Elements >]
+  }
+
+  input.value = '';
 });
 
-//! html section_1 functional >]
+//! html section_2 functional >]
 
 //todo
