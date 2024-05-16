@@ -55,7 +55,7 @@ add_btn.addEventListener('click', () => {
 
   if (inputvalue.length >= 8 && inputvalue.length <= 16) {
     //! create elemnts [<
-    console.log(inputvalue.length);
+
     let liBox = document.createElement('li');
 
     let liTxtContetn = document.createElement('p');
@@ -111,3 +111,44 @@ add_btn.addEventListener('click', () => {
 //! html section_2 functional >]
 
 //todo
+
+//! html section_3 functional [<
+
+let Arrayinpu = document.getElementById('arrayelements');
+
+let submit_btn = document.getElementById('submit_btn');
+
+let Array1 = [];
+
+submit_btn.addEventListener('click', () => {
+  function arraypushinput() {
+    let input2 = Number(Arrayinpu.value);
+
+    input2 = Arrayinpu.value;
+
+    Array1.push(input2);
+
+    input2 = Arrayinpu.value = '';
+  }
+
+  arraypushinput();
+
+  function addElementsInHtml() {
+    //! create elemnts [<
+
+    let span = document.createElement('span');
+
+    //! create elemnts >]
+
+    let ArrayNumbers = document.querySelector('.array_numbers');
+
+    ArrayNumbers.appendChild(span);
+
+    span.textContent = Array1[length - 1];
+  }
+  Array1.forEach(addElementsInHtml);
+});
+
+Array1.sort;
+
+//! html section_3 functional >]
