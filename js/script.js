@@ -133,20 +133,38 @@ submit_btn.addEventListener('click', () => {
 
   arraypushinput();
 
-  function addElementsInHtml() {
+  // function addElementsInHtml(Array1, index) {
+  //   //! create elemnts [<
+
+  //   let span = document.createElement('span');
+
+  //   //! create elemnts >]
+
+  //   let ArrayNumbers = document.querySelector('.array_numbers');
+
+  //   ArrayNumbers.appendChild(span);
+  //   if (index === Array1.length - 1) {
+  //     span.textContent = index;
+  //   }
+  // }
+  Array1.forEach((element, index) => {
     //! create elemnts [<
 
     let span = document.createElement('span');
+
+    let div = document.createElement('div');
 
     //! create elemnts >]
 
     let ArrayNumbers = document.querySelector('.array_numbers');
 
-    ArrayNumbers.appendChild(span);
+    ArrayNumbers.appendChild(div);
 
-    span.textContent = Array1[length - 1];
-  }
-  Array1.forEach(addElementsInHtml);
+    div.appendChild(span);
+    if (index === Array1.length - 1) {
+      span.textContent = element;
+    }
+  });
 });
 
 Array1.sort;
