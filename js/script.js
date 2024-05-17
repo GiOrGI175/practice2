@@ -59,6 +59,7 @@ add_btn.addEventListener('click', () => {
     let liBox = document.createElement('li');
 
     let liTxtContetn = document.createElement('p');
+
     //! create elemnts >]
 
     //! append Elements [<
@@ -69,7 +70,7 @@ add_btn.addEventListener('click', () => {
 
     liBox.classList.add('li_box');
     //! append Elements >]
-  } else if (inputvalue.length < 8) {
+  } else if (inputvalue.length < 8 && inputvalue.length != 0) {
     //! create elemnts [<
     let liBox2 = document.createElement('li');
 
@@ -103,6 +104,23 @@ add_btn.addEventListener('click', () => {
 
     liBox3.classList.add('red_p');
     //! append Elements >]
+  } else if (inputvalue.length === 0) {
+    //! create elemnts [<
+    let liBox4 = document.createElement('li');
+
+    let perormore3 = document.createElement('p');
+    //! create elemnts >]
+
+    //! append Elements [<
+    ulBox.appendChild(liBox4);
+
+    liBox4.appendChild(perormore3);
+    perormore3.textContent = 'error: give me password';
+
+    liBox4.classList.add('li_box');
+
+    liBox4.classList.add('red_p');
+    //! append Elements >]
   }
 
   input.value = '';
@@ -118,9 +136,12 @@ let Arrayinpu = document.getElementById('arrayelements');
 
 let submit_btn = document.getElementById('submit_btn');
 
+let form = document.querySelector('#form');
+
 let Array1 = [];
 
-submit_btn.addEventListener('click', () => {
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
   function arraypushinput() {
     let input2 = Number(Arrayinpu.value);
 
@@ -132,6 +153,8 @@ submit_btn.addEventListener('click', () => {
   }
 
   arraypushinput();
+
+  [1, 2, 3, 4];
 
   // function addElementsInHtml(Array1, index) {
   //   //! create elemnts [<
@@ -148,20 +171,24 @@ submit_btn.addEventListener('click', () => {
   //   }
   // }
   Array1.forEach((element, index) => {
+    console.log('index', index);
+
+    console.log(Array1.length);
+
     //! create elemnts [<
 
-    let span = document.createElement('span');
-
-    let div = document.createElement('div');
-
-    //! create elemnts >]
-
-    let ArrayNumbers = document.querySelector('.array_numbers');
-
-    ArrayNumbers.appendChild(div);
-
-    div.appendChild(span);
     if (index === Array1.length - 1) {
+      let span = document.createElement('span');
+
+      let div = document.createElement('div');
+
+      //! create elemnts >]
+
+      let ArrayNumbers = document.querySelector('.array_numbers');
+
+      ArrayNumbers.appendChild(div);
+
+      div.appendChild(span);
       span.textContent = element;
     }
   });
