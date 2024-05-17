@@ -143,33 +143,19 @@ let Array1 = [];
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   function arraypushinput() {
-    let input2 = Number(Arrayinpu.value);
+    if (Arrayinpu.value.length > 0) {
+      let input2 = Number(Arrayinpu.value);
 
-    input2 = Arrayinpu.value;
+      input2 = Arrayinpu.value;
 
-    Array1.push(input2);
+      Array1.push(input2);
 
-    input2 = Arrayinpu.value = '';
+      input2 = Arrayinpu.value = '';
+    }
   }
 
   arraypushinput();
 
-  [1, 2, 3, 4];
-
-  // function addElementsInHtml(Array1, index) {
-  //   //! create elemnts [<
-
-  //   let span = document.createElement('span');
-
-  //   //! create elemnts >]
-
-  //   let ArrayNumbers = document.querySelector('.array_numbers');
-
-  //   ArrayNumbers.appendChild(span);
-  //   if (index === Array1.length - 1) {
-  //     span.textContent = index;
-  //   }
-  // }
   Array1.forEach((element, index) => {
     console.log('index', index);
 
