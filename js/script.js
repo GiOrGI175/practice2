@@ -157,10 +157,6 @@ form.addEventListener('submit', (e) => {
   arraypushinput();
 
   Array1.forEach((element, index) => {
-    console.log('index', index);
-
-    console.log(Array1.length);
-
     //! create elemnts [<
 
     if (index === Array1.length - 1) {
@@ -176,10 +172,22 @@ form.addEventListener('submit', (e) => {
 
       div.appendChild(span);
       span.textContent = element;
+
+      console.log(Arrayinpu.value);
     }
   });
-});
 
-Array1.sort;
+  Array1.sort((a, b) => a - b);
+
+  console.log(Array1);
+
+  let ArrayLastElemnt = Array1[Array1.length - 1];
+
+  console.log(ArrayLastElemnt);
+
+  let result = document.getElementById('bigNumber');
+
+  result.textContent = ArrayLastElemnt;
+});
 
 //! html section_3 functional >]
