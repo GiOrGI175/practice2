@@ -191,3 +191,39 @@ form.addEventListener('submit', (e) => {
 });
 
 //! html section_3 functional >]
+
+//! html section_4 functional [<
+
+let formBOx = document.getElementById('form_2');
+
+formBOx.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  function getinicial() {
+    let inout = document.getElementById('inot');
+
+    let input3 = inout.value;
+
+    console.log(input3);
+
+    let inout2 = document.getElementById('inot2');
+
+    let input4 = inout2.value;
+
+    console.log(input4);
+
+    inout.value = '';
+    inout2.value = '';
+
+    let nameInitial = document.querySelector('.Nm_inicial');
+    console.log(nameInitial);
+    nameInitial.textContent = `name inicial: ${input3[0].toUpperCase()}`;
+
+    let lastnameintial = document.querySelector('.lstnm_inicial');
+    console.log(lastnameintial);
+    lastnameintial.textContent = `last name inicial: ${input4[0].toUpperCase()}`;
+  }
+  getinicial();
+});
+
+//! html section_4 functional >]
